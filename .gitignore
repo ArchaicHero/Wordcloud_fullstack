@@ -1,0 +1,4 @@
+# Using Kaggle wine reviews dataset for inital creation of wordcloud https://www.kaggle.com/zynicide/wine-reviews
+/dataset/
+/.gradle/
+/.idea/
