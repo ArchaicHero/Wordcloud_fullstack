@@ -9,14 +9,12 @@ def get_strings_from_file(filename: str) -> (str, str, [str]):
         auth = f.readline().rstrip()
         channels = [line.rstrip().lower() for line in f.readlines()]
 
-    print("\n{}\n{}".format(username, channels))
     return username, client_id, auth, channels
 
 
 if __name__ == '__main__':
     FILENAME = "TwitchStrings.txt"
     username, client_id, auth, channels = get_strings_from_file(FILENAME)
-    print("Attempting to connect to {} using bot".format(channels[0]))
 
-    bot = TwitchBot(username, client_id, auth, channels[0])
+    bot = TwitchBot(username, client_id, auth, channels)
     bot.start()
