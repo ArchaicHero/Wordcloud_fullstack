@@ -8,13 +8,13 @@ import matplotlib.pyplot as plt
 WIDTH = 1920
 HEIGHT = 1080
 
-df = pd.read_csv("../dataset/winemag-data-130k-v2.csv")
+df = pd.read_csv("../Assets/winemag-data-130k-v2.csv")
 text = " ".join(review for review in df.description)
 
 stopwords = set(STOPWORDS)
 stopwords.update(["drink", "now", "wine", "flavor", "flavors"])
 
-mask = np.array((Image.open("../dataset/wine_mask.png")).resize((WIDTH, HEIGHT)))
+mask = np.array((Image.open("../Assets/wine_mask.png")).resize((WIDTH, HEIGHT)))
 # convert format from dark image to white image for masking effect
 for row in range(len(mask)):
     for col in range(len(mask[row])):

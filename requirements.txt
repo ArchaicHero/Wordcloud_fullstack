@@ -3,3 +3,5 @@ pandas==1.2.3
 matplotlib==3.3.4
 pillow==8.1.2
 wordcloud==1.8.1
+irc==19.0.1
+requests==2.25.1
